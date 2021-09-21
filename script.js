@@ -61,7 +61,7 @@ function calculoParcela(){
     for (let i=0;i<prazoMes; i++){
         saldoDevedor.push(valor - i*amortizacao)
         juros.push(saldoDevedor[i]*jm)
-        parcela.push((saldoDevedor[i]+juros[i]).toFixed(2))
+        parcela.push((amortizacao+juros[i]).toFixed(2))
         juroAcumulado += juros[i]
     }
 
