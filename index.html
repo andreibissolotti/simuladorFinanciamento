@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simulação de financiamento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="stylePan.css">
+</head>
+<body>
+    <header>
+        <div class="headerEsq">
+            <a href="https://www.bancopan.com.br/" target="_blank" rel="noopener noreferrer"><div class="logoSVG"><img src="./src/logoPan.svg" alt=""></div></a>
+            <nav>
+                <div id="pagina" class="sobre" onclick="abrePainel(this)">
+                    <a>Sobre a página</a>
+                    <span id="markPagina" aria-hidden="true" class="mark-down"></span>
+                </div>
+                <div id="autor" class="sobre" onclick="abrePainel(this)">
+                    <a>Sobre o autor</a>
+                    <span id="markAutor" aria-hidden="true" class="mark-down"></span>
+                </div>
+            </nav>
+        </div>
+        
+        <a href="http://www.bancopan.com.br" target="_blank"rel="noopener noreferrer" class="botaoPan">Abrir Conta</a>   
+    </header>
+    <div id="sobrePagina" class="sobrePainel off">
+        <p>Esta pagina foi criada durante o Bootcamp Desenvolvedor Tech PAN da IGTI, seu objetivo é cumprir os requisitos para obtenção de aprovação no mesmo e seu unico fim é educacional.
+        </p>
+        <a href="https://online.igti.com.br/" target="_blank" rel="noopener noreferrer"><img class="logoIGTI" src="./src/logo igti (1).png" alt="https://online.igti.com.br/accounts/1/files/145/download?verifier=7NSNHq4siZpzjpIqWp5uXQjbZCnpfrrtt3bhGggT"></a>
+    </div>
+    <div id="sobreAutor" class="sobrePainel off">
+        <div>
+            <p>Me chamo Andrei Bissolotti, tenho 22 anos e estou estudando para adentrar no mercado de trabalho do ramo de desenvolvimento de software. Para saber mais, ou entrar em contato, clique em um dos icones abaixo.
+            </p><br>
+            <div class="autorRodape">
+                <a href="https://github.com/andreibissolotti" target="blank">
+                    <img src="./src/GitHub-Mark-32px.png" alt="https://i.imgur.com/SSvQAZy.png">
+                  </a>
+                  <a href="https://www.linkedin.com/in/andreibissolotti/" target="blank">
+                    <img src="./src/linkedin_black_logo_icon_147114.png" alt="https://i.imgur.com/fgV9mOt.png">
+                  </a>
+                  <a href="mailto:andreibisso@gmail.com">
+                    <img src="./src/email.png" alt="https://i.imgur.com/rUO94ml.png">
+                  </a>
+            </div>
+        </div>
+        <img class="fotoPerfil" src="./src/fotoPerfil.jpg" alt="https://media-exp1.licdn.com/dms/image/C4E03AQFQsMmwPN48tQ/profile-displayphoto-shrink_800_800/0/1617400469161?e=1637798400&v=beta&t=04T3TY9YlG57LIR9X9YDyLA8oAp0Qy4xzONcUUwHGo8">
+    </div>
+<!-- Elementos do trabalho propriamente dito -->
+
+    <div class="simuladorExterno">
+        
+        <div class="simuladorInterno">
+            <h1>Simule seu financiamento</h1>
+            <div id="entrada" class="entrada">
+                <h2>Entrada</h2>
+                <div class="inputs" nome="inputs">
+                    <div>
+                        <label for="valor">Valor:</label><br>
+                        <input type="number" id="valor" value="200000">
+                    </div>
+                    <div>
+                        <label for="prazoAno">Prazo (anos):</label><br>
+                        <input type="number" id="prazoAno" value="20">
+                    </div>
+                    <div>
+                        <label for="jurosAno">Juros (ano):</label><br>
+                        <input type="number" id="jurosAno" value="0.08">
+                    </div>
+                </div>
+                <button onclick="simular()">Simular</button>
+            </div>
+            <div id="resultado" class="off">
+                <h2>Resultado</h2>
+                <div class="inputs" nome="inputs">
+                    <div>
+                        <label for="prazoMes">Prazo (meses):</label><br>
+                        <input type="number" id="prazoMes" readonly>
+                    </div>
+                    <div>
+                        <label for="jurosMes">Juros ao mês:</label><br>
+                        <input type="number" id="jurosMes" readonly>
+                    </div>
+                    <div>
+                        <label for="jurosAcum">Juros acumulado:</label><br>
+                        <input type="number" id="jurosAcum" readonly>
+                    </div>
+                </div>
+            </div>
+            <div id="parcelas" class="off">
+                <h2>Parcelas</h2>
+                <div class="parcelas">
+                    <table class="tabelaParc"></table>
+                </div>
+            </div> <br>
+            <button id="botTabComp" class="botTabComp off" onclick="tabelaCompleta()">Exibir tabela completa</button>
+            <div id="comp" class="off">
+                <div id="tabelaCompletaCaixa" class="comp">
+                    <table id="tabelaComp"></table>
+                </div>
+                <br>
+                <button id="fecharTabComp" onclick="fecharTabComp()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+<!-- Fim do trabalho -->
+    <footer>
+        
+        <a href="http://www.bancopan.com.br" target="_blank" rel="noopener noreferrer">
+            <h3>* ESSA NÃO É UMA PÁGINA OFICIAL DO BANCO PAN</h3>
+            <p>Para acessar a página oficial clique aqui</p>
+        </a>
+    </footer>
+    <script src="./script.js"></script>
+</body>
+</html>

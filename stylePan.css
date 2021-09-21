@@ -1,0 +1,156 @@
+html {
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+}
+
+body {
+    line-height: 1.5;
+    background-color: #9fd5ef;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: white;
+    vertical-align: baseline;
+    align-items: center;
+    position: static;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.headerEsq {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    gap: 3rem;
+    margin: auto;
+    font-weight: 500;
+}
+
+.sobre{
+    display: flex;
+    gap: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: baseline;
+}
+
+.sobre:hover{
+    background-color: #e5e5e5;
+}
+
+.mark-down{
+    background: url(./src/down.svg) no-repeat;
+    background-position-y: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.mark-up{
+    background: url(./src/up.svg) no-repeat;
+    background-position-y: 5px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+.botaoPan{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 10px;
+    background-color: rgb(3, 169, 244);
+    box-shadow: 0 1px 1px 0 rgb(0 0 0 / 14%), 0 2px 1px -1px rgb(0 0 0 / 12%), 0 1px 3px 0 rgb(0 0 0 / 20%);
+    border: 2px solid #039be5;
+    padding: .8em 1.5em;
+    text-align: center;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.sobrePainel {
+    display: flex;
+    justify-content: space-between;
+    gap: 5rem;
+    padding: 1rem;
+    background-color: white;
+    position: relative;
+    top: 4.5rem;
+    left: 6rem;
+    max-width: 75rem;
+    align-items: center;
+}
+
+.sobrePainel p {
+    max-width: 40rem;
+    text-align: justify;
+    padding: 1rem;
+}
+
+.sobrePainel > div {
+    display: flex;
+    flex-direction: column;
+}
+
+.logoIGTI{
+    max-width: 25rem;
+}
+
+.fotoPerfil {
+    border: 2px solid #9fd5ef;
+    border-radius: 10px;
+    max-height: 17rem;
+    margin: 0 auto;
+}
+
+.autorRodape {
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    padding: 2rem;
+  } 
+
+footer {
+    color: white;
+    text-align: center;
+    background-color: #414141;
+    padding: 1rem;
+    position: static;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+footer h3{
+    font-weight: 800;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.off{
+    display: none;
+}
